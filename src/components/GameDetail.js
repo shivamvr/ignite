@@ -13,6 +13,7 @@ import apple from '../img/apple.svg'
 import gamepad from '../img/gamepad.svg'
 import starEmpty from '../img/star-empty.png'
 import starFull from '../img/star-full.png'
+
 const GameDetail = ({pathId}) => {
   const { screen, game, isLoading } = useSelector((state) => state.details)
   const history = useHistory()

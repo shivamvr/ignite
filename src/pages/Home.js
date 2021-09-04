@@ -21,13 +21,35 @@ const Home = () => {
   useEffect(() => {
     dispatch(loadGames())
   }, [dispatch])
-  const { popular, upcoming, newGames } = useSelector((state) => state.games)
+  const { popular, upcoming, newGames, searched } = useSelector((state) => state.games)
   // const {isLoading} = useSelector(state => state.details)
   return (
     <GameList>
       <Nav />
       <AnimateSharedLayout>
       <AnimatePresence> {pathId && <GameDetail pathId={pathId} />}</AnimatePresence> 
+
+      {/* ----------SEACHED GAMES------------ */}
+      {searched.length ? 
+       <div>
+       <h2>Search Games</h2>
+        <Games>
+        {searched.map((game) => (
+          <Game
+          gameName={game.name}
+          released={game.released}
+          id={game.id}
+          image={game.background_image}
+          key={game.id}
+          />
+          ))}
+         </Games>
+        </div>
+      : ''
+        }
+      {/* ------------------------------------ */}
+
+      {/* ----------UPCOMING GAMES------------ */}
       <h2>Upcoming Games</h2>
       <Games>
         {upcoming.map((game) => (
@@ -40,6 +62,38 @@ const Home = () => {
             />
             ))}
       </Games>
+      {/* ------------------------------------- */}
+
+      {/* ----------P0PULAR GAMES------------ */}
+      <h2>Popular Games</h2>
+      <Games>
+        {popular.map((game) => (
+          <Game
+            gameName={game.name}
+            released={game.released}
+            id={game.id}
+            image={game.background_image}
+            key={game.id}
+            />
+            ))}
+      </Games>
+      {/* ------------------------------------- */}
+
+      {/* ----------NEW GAMES------------ */}
+      <h2>New Games</h2>
+      <Games>
+        {newGames.map((game) => (
+          <Game
+            gameName={game.name}
+            released={game.released}
+            id={game.id}
+            image={game.background_image}
+            key={game.id}
+            />
+            ))}
+      </Games>
+      {/* ------------------------------------- */}
+
             </AnimateSharedLayout>
     </GameList>
   )

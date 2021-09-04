@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { popularGamesUrl, upcomingGamesUrl, newGamesUrl, searchGameUrl } from '../api'
-console.log('searchGameUrl:', searchGameUrl())
 
 //Action creator
 
