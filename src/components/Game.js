@@ -22,7 +22,7 @@ const Game = ({ gameName, image, released, id }) => {
       <Link to={`/game/${id}`}>
       <motion.h3 layoutId={`title ${id.toString()}`}>{gameName}</motion.h3>
       <p>{released}</p>
-      <motion.img layoutId={`image ${id.toString()}`} src={smallImage(image,640)} alt="" />
+      <motion.img layoutId={`image ${id.toString()}`}  src={smallImage(image,640) ? smallImage(image,640):''} alt="" />
       </Link>
     </StyledGame>
   )
@@ -39,7 +39,7 @@ const StyledGame = styled(motion.div)`
   overflow: hidden;
   img {
     width: 100%;
-    height: 35vh;
+    height: 180px;
     object-fit: cover;
   }
 `

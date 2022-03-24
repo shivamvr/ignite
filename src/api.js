@@ -40,7 +40,7 @@ const newGames = `games?key=${auth}&dates=${lastYear},${currentDate}`
 
  export const popularGamesUrl = () => `${base_url}${popularGames}&ordering=-rating&page_size=10`
  export const upcomingGamesUrl = () => `${base_url}${upcomingGames}&ordering=-added&page_size=10`
- export const newGamesUrl = () => `${base_url}${newGames}&ordering=-released&page_size=10`
+ export const newGamesUrl = () => `${base_url}${newGames}&ordering=-released&page_size=7`
  export const gameDetailsUrl = (game_id) => `${base_url}games/${game_id}?key=${auth}`
  export const gameScreenshotUrl = (game_id) => `${base_url}games/${game_id}/screenshots?key=${auth}`
  export const searchGameUrl = (game_name) => `${base_url}games?search=${game_name}/&page_size=9&key=${auth}`

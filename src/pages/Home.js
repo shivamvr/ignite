@@ -23,7 +23,6 @@ const Home = () => {
   }, [dispatch])
 
   const { popular, upcoming, newGames, searched, input } = useSelector((state) => state.games)
-  console.log('newGames:', newGames)
   return (
     <GameList>
       <Nav />
@@ -82,7 +81,7 @@ const Home = () => {
 
         {/* ----------NEW GAMES------------ */}
         <h2>New Games</h2>
-          {/* <Games>
+          <Games>
             {newGames.map((game) => (
               <Game
                 gameName={game.name}
@@ -92,7 +91,7 @@ const Home = () => {
                 key={game.id}
               />
             ))}
-          </Games> */}
+          </Games>
         {/* ------------------------------------- */}
 
       </AnimateSharedLayout>
@@ -103,8 +102,8 @@ const GameList = styled(motion.div)`
   padding: 1rem 5rem;
 `
 const Games = styled(motion.div)`
-  min-height: 80vh;
-  padding: 5rem 0;
+  min-height: 32px;
+  padding: 3rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 1rem;

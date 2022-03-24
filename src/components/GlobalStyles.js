@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
+
 html{
     &::-webkit-scrollbar{
         width: .5rem;
@@ -21,7 +22,7 @@ html{
         width: 100%;
     }
     h2{
-        font-size: 200%;
+        font-size: 250%;
     }
     h3{
        padding: 0% .5rem;

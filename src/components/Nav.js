@@ -51,23 +51,33 @@ const StyledNav = styled(motion.div)`
     outline: none;
   }
   button {
+    height: 3rem;
+    font-size: 18px;
     background: #ff7676;
     border-radius: 0 8px 8px 0;
     color: #fff;
     cursor: pointer;
   }
   input {
-    width: 20rem;
+    width: 35rem;
+    height: 3rem;
     color: #333;
-    box-shadow: 0 3px 8px #ccc;
-    border-radius: 8px 0 0 8px;
+    font-size: 18px;
+    padding-left: 2rem;
+    box-shadow: 0 4px 10px #ccc;
+    border-radius: 30px 0 0 30px;
+    margin-bottom: 2rem;
   }
 `
 
 const Logo = styled(motion.div)`
-  padding: 1rem;
+  margin: 1rem;
   display: flex;
   justify-content: center;
   cursor: pointer;
+  font-size: 2rem;
+  &>img{
+    width: 2.5rem ;
+  }
 `
 export default Nav

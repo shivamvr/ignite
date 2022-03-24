@@ -45,8 +45,8 @@ const GameDetail = ({pathId}) => {
       }else{
         stars.push(<img key={i} src={starEmpty} alt='star'/> )
       }
-    
     }
+
     return stars
   }
   
@@ -129,14 +129,19 @@ const Detail = styled(motion.div)`
   h3 {
     padding: 1rem 0;
   }
+  .rating p{
+          padding:0 ;
+          margin-bottom: .5rem;
+  }
 `
 const Stats = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1rem;
   img{
     display: inline;
-    width: 20%;
+    width: 15px;
   }
 `
 const Info = styled(motion.div)`
@@ -148,7 +153,7 @@ const Platforms = styled(motion.div)`
   align-items: center;
   img {
     margin-left: 2rem;
-    width: 1.5rem;
+    width: 1.4rem;
   }
 `
 const Description = styled(motion.div)`
