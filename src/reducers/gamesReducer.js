@@ -3,6 +3,7 @@ const initState = {
   newGames: [],
   upcoming: [],
   searched: [],
+  input: ''
 }
 const gameReducer = (state = initState, action) => {
   switch (action.type) {
@@ -22,6 +23,11 @@ const gameReducer = (state = initState, action) => {
       return {
         ...state,
         searched: [],
+      }
+    case 'INPUT_TEXT':
+      return {
+        ...state,
+        input: action.payload
       }
     default:
       return { ...state }

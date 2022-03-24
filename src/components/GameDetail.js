@@ -96,6 +96,7 @@ const GameDetail = ({pathId}) => {
   )
 }
 const CardShadow = styled(motion.div)`
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -103,6 +104,15 @@ const CardShadow = styled(motion.div)`
   background: rgba(0, 0, 0, 0.5);
   min-height: 100vh;
   overflow-y: scroll;
+  &::-webkit-scrollbar-thumb{
+     border-radius: 1rem;
+  }
+  &::-webkit-scrollbar-thumb{
+     background: red
+  }
+  &::-webkit-scrollbar-track{
+     background: #fff
+  }
   `
 const Detail = styled(motion.div)`
   position: absolute;

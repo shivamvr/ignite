@@ -23,4 +23,8 @@ export const fetchSearch = (game_name) => async (dispatch) => {
     type: 'FETCH_SEARCH',
     payload: {searched: seachGames.data.results,},
    })
+   dispatch({
+     type: 'INPUT_TEXT',
+     payload: game_name
+   })
 }
